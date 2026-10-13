@@ -25,3 +25,4 @@ Email: demo@example.com
 ```
 
 Данные демо-режима сохраняются только в `localStorage` браузера.
+
