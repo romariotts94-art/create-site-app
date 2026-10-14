@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuySite — каталог готовых сайтов</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./evaluation.css">
+  <link rel="stylesheet" href="./card-interactions.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><span class="brand-mark">B</span><span>BuySite</span></a>
+    <span class="topbar-note">Маркетплейс готовых цифровых продуктов · <a href="./prg.html">Контроль качества</a></span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Коллекция готовых сайтов</p>
+        <h1>Выберите основу<br>для следующего проекта.</h1>
+        <p class="hero-copy">Не шаблоны, а готовые цифровые продукты с понятной ценностью для бизнеса, демо, исходниками и лицензией.</p>
+      </div>
+      <div class="hero-stat"><strong id="site-count">—</strong><span>проектов<br>в каталоге</span></div>
+    </section>
+
+    <section class="toolbar" aria-label="Фильтры каталога">
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Поиск по названию или категории"></label>
+      <select id="category" aria-label="Категория"><option value="">Все категории</option></select>
+    </section>
+
+    <section id="catalog" class="catalog" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>По вашему запросу ничего не найдено.</p>
+  </main>
+
+  <dialog id="preview-dialog" class="preview-dialog">
+    <div class="dialog-head"><div><p class="eyebrow">Предпросмотр проекта</p><h2 id="dialog-title">Сайт</h2></div><button id="close-dialog" class="icon-button" type="button" aria-label="Закрыть">×</button></div>
+    <iframe id="preview-frame" title="Предпросмотр сайта" loading="lazy"></iframe>
+  </dialog>
+  <script src="../catalog/catalog-data.js"></script>
+  <script src="./app.js?v=clickable-card-1"></script>
+</body>
+</html>

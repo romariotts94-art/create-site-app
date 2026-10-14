@@ -1,0 +1,388 @@
+[
+  {
+    "id": "site-001",
+    "slug": "atelier-real-estate",
+    "title": "Atelier — недвижимость с точностью",
+    "status": "review",
+    "category": "Недвижимость",
+    "price": 1000000,
+    "currency": "RUB",
+    "previewUrl": "/marketplace/sites/atelier-real-estate/public/index.html",
+    "previewImage": "/marketplace/sites/atelier-real-estate/public/assets/hero-architectural.png",
+    "packagePath": "marketplace/sites/atelier-real-estate/packages/atelier-real-estate.zip",
+    "description": "Многостраничная премиальная платформа недвижимости с каталогом, подборками, статьями, видео и картой.",
+    "tagline": "Премиальная подача объектов для агентства, которому доверяют",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Агентства недвижимости",
+      "Премиальные ЖК"
+    ],
+    "included": [
+      "Многостраничный сайт",
+      "Каталог объектов",
+      "Видео и галереи",
+      "Ипотечный калькулятор"
+    ],
+    "features": [
+      "36 объектов",
+      "Многостраничная структура",
+      "Фото и видео",
+      "Фильтры каталога",
+      "Ипотечный калькулятор",
+      "Yandex Maps fallback"
+    ],
+    "theme": "architectural-precision",
+    "level": 0,
+    "tier": "growth",
+    "source": "blueprint",
+    "evaluation": {
+      "baseWeight": 132,
+      "multiplier": 2,
+      "totalWeight": 264,
+      "class": "Сложная бизнес-система",
+      "entityWeight": 103,
+      "functionalLoad": 161,
+      "note": "Усиленная версия: добавлена более глубокая бизнес-функциональность без механического дублирования элементов."
+    }
+  },
+  {
+    "id": "site-002",
+    "slug": "noir-estate",
+    "title": "Noir Estate",
+    "status": "review",
+    "category": "Недвижимость",
+    "price": 1000000,
+    "currency": "RUB",
+    "previewUrl": "/marketplace/sites/noir-estate/public/index.html",
+    "previewImage": "/marketplace/sites/noir-estate/public/assets/hero-architectural.png",
+    "description": "Многостраничная тёмная редакционная платформа для знаковых городских объектов, с каталогом, подборками, статьями, видео и картой.",
+    "tagline": "Тёмная редакционная эстетика для знаковых городских объектов",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Бутик-агентства",
+      "Городская недвижимость"
+    ],
+    "included": [
+      "Многостраничный сайт",
+      "Каталог объектов",
+      "Тёмная редакционная тема",
+      "Ипотечный калькулятор"
+    ],
+    "features": [],
+    "theme": "dark-editorial",
+    "level": 0,
+    "tier": "growth",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-003",
+    "slug": "casa-sol",
+    "title": "Casa Sol — дома, в которых живут",
+    "status": "review",
+    "category": "Недвижимость",
+    "price": 1000000,
+    "currency": "RUB",
+    "previewUrl": "/marketplace/sites/casa-sol/public/index.html",
+    "previewImage": "/marketplace/sites/casa-sol/public/assets/hero-architectural.png",
+    "packagePath": "marketplace/sites/casa-sol/packages/casa-sol.zip",
+    "description": "Многостраничная тёплая платформа для покупки загородного дома: каталог, подборки, финансовый маршрут, просмотры и сопровождение сделки.",
+    "tagline": "Тёплая платформа для покупки дома, который становится частью жизни",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Загородные дома",
+      "Коттеджные посёлки",
+      "Курортные резиденции"
+    ],
+    "included": [
+      "Многостраничный сайт",
+      "Каталог домов и подборки",
+      "Калькулятор и запись на просмотр",
+      "Избранное и сравнение",
+      "Демо-центр: заказ, оплата, CRM и кабинет"
+    ],
+    "features": [
+      "72 объекта",
+      "5 страниц",
+      "Фото и видео-слой",
+      "Фильтры и сортировка",
+      "Избранное и сравнение",
+      "Ипотечный калькулятор",
+      "Карта локаций",
+      "Личный кабинет",
+      "Запись на просмотр",
+      "Экран оплаты в демо-режиме",
+      "Корзина и заказ",
+      "CRM с заявками",
+      "Статусы сделки",
+      "Уведомления",
+      "Карточки клиентов",
+      "Отдельное досье каждого объекта",
+      "100 сущностей глубины на объект",
+      "Смысловой слой стиля и продажи",
+      "Контентное администрирование объектов",
+      "Управление фото, видео, турами и планировками",
+      "Роли, предпросмотр и журнал изменений"
+    ],
+    "theme": "warm-mediterranean",
+    "level": 3,
+    "tier": "platform",
+    "source": "blueprint",
+    "evaluation": {
+      "baseWeight": 132,
+      "multiplier": 4,
+      "depthBonus": 100,
+      "totalWeight": 628,
+      "class": "Платформенный продукт с глубокими профилями",
+      "entityWeight": 335,
+      "functionalLoad": 161,
+      "note": "Уровень 3: самостоятельное досье каждого объекта, минимум 100 функциональных, объектных и смысловых сущностей на страницу и контентное управление через администратор."
+    }
+  },
+  {
+    "id": "site-004",
+    "slug": "nord-habitat",
+    "title": "Nord Habitat — квартиры для жизни",
+    "status": "review",
+    "category": "Новостройки",
+    "price": 1000000,
+    "currency": "RUB",
+    "previewUrl": "/marketplace/sites/nord-habitat/public/index.html",
+    "previewImage": "/marketplace/sites/nord-habitat/public/assets/nord-habitat-hero.png",
+    "description": "Современный девелоперский сервис для поиска квартиры, проекта и района: AI-поиск, каталог, экономика покупки и маршрут клиента.",
+    "tagline": "Умный девелоперский сервис для выбора квартиры и района",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Девелоперы",
+      "Жилые комплексы",
+      "Агентства новостроек"
+    ],
+    "included": [
+      "AI-поиск квартиры",
+      "Каталог проектов и квартир",
+      "Калькулятор ипотеки и рассрочки",
+      "Карта районов и сценарии жизни",
+      "Личный кабинет и CRM-маршрут"
+    ],
+    "features": [
+      "AI-поиск по сценарию жизни",
+      "48 квартир и 12 проектов",
+      "Фильтры, сортировка и сравнение",
+      "Ипотека и рассрочка",
+      "Районный скоринг",
+      "Избранное и сохранённые поиски",
+      "Запись на просмотр",
+      "Личный кабинет",
+      "Админ-центр и управление лидами"
+    ],
+    "theme": "skyline-editorial",
+    "level": 4,
+    "tier": "platform",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-005",
+    "slug": "city-grid",
+    "title": "City Grid",
+    "status": "blueprint",
+    "category": "Коммерческая недвижимость",
+    "price": 1000000,
+    "currency": "RUB",
+    "description": "Сильный городской интерфейс для офисов и коммерческих площадей. Профиль готовится на общем ядре BuySite.",
+    "tagline": "Сильный городской интерфейс для офисов и коммерческих площадей",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Бизнес-центры",
+      "Коммерческие объекты"
+    ],
+    "included": [
+      "Адаптивная структура",
+      "Контентные секции",
+      "Готовность к расширению"
+    ],
+    "features": [],
+    "theme": "urban-brutalist",
+    "level": 0,
+    "tier": "pro",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-006",
+    "slug": "velvet-living",
+    "title": "Velvet Living",
+    "status": "blueprint",
+    "category": "Интерьеры и недвижимость",
+    "price": 1000000,
+    "currency": "RUB",
+    "description": "Мягкая премиальная подача для клиентов, выбирающих глазами. Профиль готовится на общем ядре BuySite.",
+    "tagline": "Мягкая премиальная подача для клиентов, выбирающих глазами",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Дизайн-студии",
+      "Премиальные интерьеры"
+    ],
+    "included": [
+      "Адаптивная структура",
+      "Контентные секции",
+      "Готовность к расширению"
+    ],
+    "features": [],
+    "theme": "soft-premium",
+    "level": 0,
+    "tier": "growth",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-007",
+    "slug": "district-developer",
+    "title": "District Developer",
+    "status": "blueprint",
+    "category": "Девелопмент",
+    "price": 1000000,
+    "currency": "RUB",
+    "description": "Инструмент продаж жилого проекта с планировками и аналитикой. Профиль готовится на общем ядре BuySite.",
+    "tagline": "Инструмент продаж жилого проекта с планировками и аналитикой",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Девелоперы",
+      "Застройщики"
+    ],
+    "included": [
+      "Адаптивная структура",
+      "Контентные секции",
+      "Готовность к расширению"
+    ],
+    "features": [],
+    "theme": "developer-pro",
+    "level": 0,
+    "tier": "pro",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-008",
+    "slug": "capital-yield",
+    "title": "Capital Yield",
+    "status": "blueprint",
+    "category": "Инвестиции",
+    "price": 1000000,
+    "currency": "RUB",
+    "description": "Сайт, который превращает характеристики объекта в инвестиционное решение. Профиль готовится на общем ядре BuySite.",
+    "tagline": "Сайт, который превращает характеристики объекта в инвестиционное решение",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Инвестиционные компании",
+      "Покупатели доходной недвижимости"
+    ],
+    "included": [
+      "Адаптивная структура",
+      "Контентные секции",
+      "Готовность к расширению"
+    ],
+    "features": [],
+    "theme": "investment",
+    "level": 0,
+    "tier": "pro",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-009",
+    "slug": "stay-and-live",
+    "title": "Stay & Live",
+    "status": "blueprint",
+    "category": "Аренда",
+    "price": 1000000,
+    "currency": "RUB",
+    "description": "Эмоциональная витрина для бронирования квартир и апартаментов. Профиль готовится на общем ядре BuySite.",
+    "tagline": "Эмоциональная витрина для бронирования квартир и апартаментов",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Апарт-отели",
+      "Арендные операторы"
+    ],
+    "included": [
+      "Адаптивная структура",
+      "Контентные секции",
+      "Готовность к расширению"
+    ],
+    "features": [],
+    "theme": "rental-lifestyle",
+    "level": 0,
+    "tier": "commerce",
+    "source": "blueprint"
+  },
+  {
+    "id": "site-010",
+    "slug": "estate-os",
+    "title": "Estate OS",
+    "status": "blueprint",
+    "category": "Платформа недвижимости",
+    "price": 1000000,
+    "currency": "RUB",
+    "description": "Полноценная цифровая система продаж, заявок и управления объектами. Профиль готовится на общем ядре BuySite.",
+    "tagline": "Полноценная цифровая система продаж, заявок и управления объектами",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive UI"
+    ],
+    "suitableFor": [
+      "Крупные агентства",
+      "Сети недвижимости"
+    ],
+    "included": [
+      "Адаптивная структура",
+      "Контентные секции",
+      "Готовность к расширению"
+    ],
+    "features": [],
+    "theme": "full-estate-platform",
+    "level": 0,
+    "tier": "commerce",
+    "source": "blueprint"
+  }
+]

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuySite — Production Readiness Gate</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .prg-shell{max-width:1180px;margin:0 auto;padding:56px 24px}.prg-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}.prg-head h1{margin:0;font-size:clamp(36px,6vw,68px);line-height:.95;letter-spacing:-.06em}.prg-meta{color:#697684;line-height:1.5}.prg-score{min-width:180px;padding:22px;border:1px solid #ded4f3;border-radius:18px;background:#eee7fb;color:#5d477f}.prg-score strong{display:block;font-size:52px;letter-spacing:-.08em}.prg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}.prg-card{padding:16px;border:1px solid #e0e5ea;border-radius:14px;background:#fff}.prg-card b{display:block;margin-top:8px;font-size:24px}.prg-card small{color:#768391}.prg-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e0e5ea;border-radius:14px;overflow:hidden}.prg-table th,.prg-table td{padding:14px;text-align:left;border-bottom:1px solid #edf0f2;font-size:13px}.prg-table th{color:#768391;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.pass{color:#2e7651}.fail{color:#a33d3d}.not-tested{color:#9a6c32}@media(max-width:800px){.prg-grid{grid-template-columns:repeat(2,1fr)}.prg-head{align-items:start;flex-direction:column}}@media(max-width:500px){.prg-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./index.html"><span class="brand-mark">B</span><span>BuySite</span></a><span class="topbar-note">Production Readiness Gate</span></header>
+  <main class="prg-shell"><div id="app">Загрузка отчёта…</div></main>
+  <script>
+    const root = document.querySelector('#app');
+    fetch('../reports/prg/casa-sol-latest.json').then((response) => { if (!response.ok) throw new Error('Отчёт ещё не создан.'); return response.json(); }).then((report) => {
+      root.innerHTML = `<div class="prg-head"><div><p class="eyebrow">Объективный контроль</p><h1>Production<br>Readiness Gate</h1><p class="prg-meta">${report.site} · ${new Date(report.generatedAt).toLocaleString('ru-RU')}<br>Коммит: ${report.git}</p></div><div class="prg-score"><small>Итоговый score</small><strong>${report.score}%</strong><span class="${report.status === 'Not Ready' ? 'fail' : 'pass'}">${report.status}</span></div></div><section class="prg-grid">${Object.entries(report.categoryScores).map(([name, item]) => `<article class="prg-card"><small>${name} · вес ${item.weight}%</small><b class="${item.status}">${item.status === 'not-tested' ? 'NOT TESTED' : `${item.score}%`}</b></article>`).join('')}</section><table class="prg-table"><thead><tr><th>Проверка</th><th>Категория</th><th>Статус</th><th>Результат</th></tr></thead><tbody>${report.checks.map((check) => `<tr><td>${check.id}</td><td>${check.category}</td><td class="${check.status}">${check.status}</td><td>${check.message}</td></tr>`).join('')}</tbody></table>`;
+    }).catch((error) => { root.innerHTML = `<p>${error.message}</p><p>Запустите <code>node scripts/production-readiness-gate.mjs --site=casa-sol</code>.</p>`; });
+  </script>
+</body>
+</html>

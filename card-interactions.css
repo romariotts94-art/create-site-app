@@ -1,0 +1,2 @@
+.site-card{cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.site-card:hover,.site-card:focus-visible{transform:translateY(-3px);box-shadow:0 16px 36px #19232d18;outline:3px solid #ded4f3;outline-offset:3px}

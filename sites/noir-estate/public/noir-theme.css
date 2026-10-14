@@ -1,0 +1,23 @@
+:root{--ink:#f5f2ed;--ink-soft:#c9c2b8;--muted:#9a948c;--surface:#121417;--surface-2:#1b1e22;--line:#34383b;--blue:#d39b5c;--accent:#d39b5c;--paper:#eeeae3;--shadow:rgba(0,0,0,.3)}
+body{background:var(--surface);color:var(--ink)}
+.app-shell{background:var(--surface)}
+.site-header{background:rgba(18,20,23,.88);border-bottom-color:var(--line);backdrop-filter:blur(14px)}
+.brand,.main-nav a,.site-header .ghost-btn{color:var(--ink)}
+.brand-mark{background:var(--accent);color:#121417;border-radius:5px}
+.main-nav a:hover,.main-nav a.active{color:var(--accent)!important}
+.hero{background:#14171a!important}
+.hero-overlay{background:linear-gradient(90deg,rgba(10,11,12,.84),rgba(10,11,12,.35)),linear-gradient(0deg,rgba(10,11,12,.72),transparent 70%)!important}
+.eyebrow,.section-kicker,.article-meta,.calc-top{color:var(--accent)!important}
+h1,h2,h3,.hero h1,.section h2,.article h3{color:var(--ink)}
+.hero h1 em,.section h2 em,.map-copy h3 em{color:var(--accent);font-family:Georgia,serif;font-weight:400}
+.hero-copy,.lead,.article h3,.section p{color:var(--ink-soft)}
+.search-panel,.calculator,.property-card,.article,.filter-rail{background:var(--surface-2)!important;border-color:var(--line)!important;color:var(--ink)}
+.search-tabs,.search-fields,.quick-filters,.filter-rail,.results-toolbar{border-color:var(--line)!important}
+.field span,.filter-label,.filter-group,.results-toolbar,.article-meta{color:var(--muted)!important}
+input,select{background:var(--surface-2)!important;color:var(--ink)!important;border-color:var(--line)!important}
+.primary-btn,.dark-btn{background:var(--accent)!important;color:#121417!important}.outline-btn,.text-link{color:var(--accent)!important;border-color:var(--accent)!important}
+.collection-card,.property-image,.article-image{filter:saturate(.7) contrast(1.06)}
+.map-preview{background:linear-gradient(135deg,#252b2d,#121417)!important;border-color:var(--line)}
+.map-grid{opacity:.22}.map-pin{background:var(--accent);color:#121417}
+.footer{background:#0d0f11;border-top-color:var(--line)}.footer a,.footer p,.footer-bottom{color:var(--muted)}
+.modal{background:var(--surface-2);border-color:var(--line);color:var(--ink)}
