@@ -1,10 +1,16 @@
 name: John Fry — browser QA and visual evidence
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/**'
+      - 'scripts/john-fry/browser-qa.mjs'
+      - '.github/workflows/john-fry-browser.yml'
   workflow_dispatch:
     inputs:
       candidate_sha:
         description: "Exact 40-character commit SHA from main"
-        required: true
+        required: false
 permissions:
   contents: read
 jobs:
@@ -18,7 +24,7 @@ jobs:
           persist-credentials: false
       - name: Verify candidate is in main
         env:
-          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha || github.sha }}
         shell: bash
         run: |
           set -euo pipefail
