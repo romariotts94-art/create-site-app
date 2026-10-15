@@ -1,0 +1,69 @@
+name: John Fry Studio — guarded preview
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Site or marketplace identifier (for audit)"
+        required: true
+        default: "marketplace"
+      change_id:
+        description: "Approved work item ID"
+        required: true
+      candidate_sha:
+        description: "Exact main commit to test (40 hex chars)"
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: john-fry-studio
+  cancel-in-progress: false
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.validate.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: validate
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          CHANGE_ID: ${{ inputs.change_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$CANDIDATE_SHA" =~ ^[0-9a-fA-F]{40}$ ]] || { echo 'Invalid commit SHA'; exit 1; }
+          [[ "$CHANGE_ID" =~ ^[a-zA-Z0-9._-]{3,80}$ ]] || { echo 'Invalid change ID'; exit 1; }
+          test -s AGENTS.md
+          test -s agents/john-fry/PERSONA.md
+          test -s docs/CINEMATIC_INTELLIGENCE_LUXURY.md
+          git cat-file -e "${CANDIDATE_SHA}^{commit}"
+          git merge-base --is-ancestor "$CANDIDATE_SHA" origin/main
+          echo "sha=$CANDIDATE_SHA" >> "$GITHUB_OUTPUT"
+  test-candidate:
+    needs: preflight
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.preflight.outputs.sha }}
+          persist-credentials: false
+      - name: Detect project tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f package.json ]; then
+            echo 'Root package detected'
+          elif [ -f apps/web/package.json ]; then
+            echo 'apps/web package detected'
+          else
+            echo 'BLOCKED: project package path and test commands not verified'
+            exit 1
+          fi
+      - name: Explicitly require verified test integration
+        run: |
+          echo 'BLOCKED: connect repository-specific build, unit, e2e, security, visual screenshot checks before preview approval'
+          exit 1
+  # Intentionally NO deploy job. Owner approval is required and deployment integration
+  # must be configured explicitly. This workflow never writes to main or production.
