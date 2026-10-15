@@ -36,3 +36,10 @@ The owner authorizes autonomous research, proposal drafting, and staging experim
 - `scripts/john-fry/verify.mjs` detects potential Node apps and attempts checks when an npm lockfile and scripts exist; no application path or successful CI run has been verified.
 - The workflow remains deliberately red until visual/security/staging checks are integrated. It is not an autonomous coding agent and cannot publish.
 - A live AI coding executor and a staging host require external service configuration and credentials, which must never be committed to the repository.
+
+## Browser QA added 2026-10-15
+- Manual GitHub Action `.github/workflows/john-fry-browser.yml` runs Chromium/Playwright against the repository's existing static `dist/` catalog.
+- `scripts/john-fry/browser-qa.mjs` checks 390/768/1440 px layouts, overflow, title, visible content, catalog and first site hash routes, uncaught JS errors, and captures screenshots and a JSON report.
+- This is an unexecuted workflow definition, **not evidence that tests passed**. It does not create a public preview URL, deploy GitHub Pages, change production, or provide an AI coding runner.
+- GitHub Pages can host static `dist/` only after the owner explicitly approves a publication SHA and enables a separate owner-gated deployment workflow. Static browser demo features are not proof of real production backends.
+- For autonomous AI coding, select and authorize a runner and credential method; do not grant unguarded push access to `main`.
