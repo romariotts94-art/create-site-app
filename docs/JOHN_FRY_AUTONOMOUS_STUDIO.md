@@ -43,3 +43,13 @@ The owner authorizes autonomous research, proposal drafting, and staging experim
 - This is an unexecuted workflow definition, **not evidence that tests passed**. It does not create a public preview URL, deploy GitHub Pages, change production, or provide an AI coding runner.
 - GitHub Pages can host static `dist/` only after the owner explicitly approves a publication SHA and enables a separate owner-gated deployment workflow. Static browser demo features are not proof of real production backends.
 - For autonomous AI coding, select and authorize a runner and credential method; do not grant unguarded push access to `main`.
+
+## Owner-approved branch workflow (2026-10-15)
+The owner explicitly superseded the earlier no-branches/no-PR restriction for this workflow.
+- Working branch: `john-fry-pending-approval` (created from `main`). No other new branches or repositories.
+- John Fry and the Builder may propose changes only in the pending-approval branch. No direct changes to `main` for site work.
+- Run browser QA, build checks, security and visual review on the exact candidate commit. Include a diff, screenshots, failures, and a preview artifact in the review package. If any required check is missing, mark it NOT VERIFIED, never claim approved.
+- Open a pull request from `john-fry-pending-approval` to `main` once there are actual candidate changes; request the owner's explicit review. A PR is a review mechanism, not publication permission.
+- **Only the owner's explicit 'Да, утверждаю' for that specific PR and exact head SHA permits merge.** Any subsequent change requires renewed approval. No automation should merge merely because tests pass or a time limit expires.
+- Protect `main` using GitHub branch rules: require a pull request and checks, restrict direct pushes, disable auto-merge. These GitHub repository settings are NOT configured by this documentation and must be verified separately.
+- After merge, deployment to a public URL remains a separate action requiring approval. GitHub Pages is not yet enabled.
