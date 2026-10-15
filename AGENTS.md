@@ -151,3 +151,6 @@ Repository rule for this project: work in `romariotts94-art/create-site-app` on 
 
 ## Final principle
 Prioritize genuine functionality over visual-only appearance, reliability over speed, and truthful verification over fake completeness. These rules guide Codex but do not themselves install automation, create separate critic agents, or guarantee bug-free software.
+
+## JOHN FRY — OWNER-APPROVED EXCEPTION (2026-10-15)
+The repository owner explicitly authorized one review branch, `john-fry-pending-approval`, superseding the older `main`-only / no-branches / no-PR rules **for John Fry's site development workflow only**. Work on site candidates in that branch, not directly on `main`. Use a PR to `main` for review when there are changes. No merge without explicit owner approval of the exact PR head SHA after checks. No automatic publication; see `docs/JOHN_FRY_AUTONOMOUS_STUDIO.md`. No additional branches or repositories. Existing preflight, QA and security requirements still apply. If branch protection has not been configured, state that the approval gate is procedural, not technically enforced.
