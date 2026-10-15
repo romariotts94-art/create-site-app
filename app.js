@@ -45,7 +45,7 @@ function render() {
   emptyEl.hidden = sites.length > 0;
   catalogEl.innerHTML = sites.map((site, index) => `
     <article class="site-card" data-preview="${site.id}" tabindex="0" role="${site.previewUrl ? "link" : "article"}" aria-label="${site.previewUrl ? `Открыть сайт: ${site.title}` : site.title}">
-      <div class="site-art"><img class="site-art-image" src="${pathFromCatalog(site.previewImage || site.previewUrl)}" alt="" loading="lazy"><span class="site-number">${String(index + 1).padStart(2, "0")} / ${String(state.sites.length).padStart(2, "0")}</span><span class="site-status">${site.status === "published" ? "Готов к запуску" : "На доработке"}</span><h2>${site.title}</h2></div>
+      <div class="site-art"><img class="site-art-image" src="${pathFromCatalog(site.previewImage || site.previewUrl)}" alt=""><span class="site-number">${String(index + 1).padStart(2, "0")} / ${String(state.sites.length).padStart(2, "0")}</span><span class="site-status">${site.status === "published" ? "Готов к запуску" : "На доработке"}</span><h2>${site.title}</h2></div>
       <div class="site-body">
         <div class="site-meta"><span>${site.category}</span><span>Лицензия включена</span></div>
         <p class="tagline">${site.tagline || site.description || "Готовый сайт с исходниками и демо-версией."}</p>
