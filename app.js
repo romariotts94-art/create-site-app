@@ -12,7 +12,7 @@ const fallbackCatalog = [{
   category: "Недвижимость",
   price: 1000000,
   previewUrl: "sites/atelier-real-estate/public/index.html",
-  previewImage: "sites/atelier-real-estate/public/assets/hero-architectural.png",
+  previewImage: "sites/atelier-real-estate/public/assets/hero-architectural.jpg",
   description: "Многостраничная премиальная платформа недвижимости с каталогом, подборками, статьями, видео и картой.",
   tagline: "Премиальный сайт недвижимости, который помогает продавать доверие и объекты",
   technologies: ["HTML5", "CSS3", "Vanilla JavaScript", "Responsive UI"],
