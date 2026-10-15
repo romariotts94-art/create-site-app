@@ -24,7 +24,7 @@ function pathFromCatalog(url) {
   if (!url) return "";
   if (url.startsWith("/marketplace/")) return `./${url.slice("/marketplace/".length)}`;
   if (url.startsWith("/")) return `.${url}`;
-  return url;
+  return url.startsWith("./") ? url : `./${url}`;
 }
 
 function rubles(value) {
