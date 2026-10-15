@@ -122,5 +122,13 @@ Requested functionality works end-to-end, relevant checks pass, errors are handl
 ## 38. Final report
 Report: Implemented; Verified (actual commands/results); Fixed; Remaining; Quality Gate: PASS or NOT READY. Be explicit about missing tools, credentials, browser coverage, and untested paths.
 
+
+## 39. Global cinematic art direction — ALL existing and future marketplace sites
+MANDATORY: Read `docs/CINEMATIC_INTELLIGENCE_LUXURY.md` for every website design, redesign, UI implementation, animation, component creation, and visual QA task in this repository. This applies to **all existing sites and every future site** in the marketplace, including independently deployable sites, not only ESTERRA, and not only hero images or photography. Apply visual storytelling to all components and states: navigation, layout, typography, colors, tonal hierarchy, spacing, depth, forms, buttons, cards, charts, maps, dialogs, feedback, loading, empty/error states, transitions, microinteractions, and mobile layouts.
+
+The standard defines a **shared level of artistic quality and evaluation, not one shared appearance**. Each brand/site retains its unique identity, approved palette, fonts, audience, functionality, and visual direction. Do not indiscriminately restyle, break, or rewrite existing sites. For existing sites, audit and improve incrementally as authorized by the task, with regression checks. For new sites, design with these principles from the start. Apply the same art-direction gate to all sites; verify actual renders and interaction states rather than claiming quality from code alone. Keep accessibility, performance, clarity, and user tasks ahead of ornamental effects.
+
+Repository rule for this project: work in `romariotts94-art/create-site-app` on `main` only, unless the user explicitly authorizes otherwise. Do not create new branches, PRs, or repositories. 
+
 ## Final principle
 Prioritize genuine functionality over visual-only appearance, reliability over speed, and truthful verification over fake completeness. These rules guide Codex but do not themselves install automation, create separate critic agents, or guarantee bug-free software.
