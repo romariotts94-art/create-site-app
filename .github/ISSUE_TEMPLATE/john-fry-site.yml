@@ -1,0 +1,29 @@
+name: "John Fry — новый сайт"
+description: "Задание для Codex и арт-директора Джона Фрая"
+title: "[John Fry] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Задание фиксируется в GitHub. Для запуска Codex откройте задачу в Codex и передайте ему ссылку; само создание Issue НЕ запускает Codex."
+  - type: input
+    id: site
+    attributes:
+      label: "Название и отрасль"
+      placeholder: "Премиальная недвижимость — ESTERRA"
+    validations:
+      required: true
+  - type: textarea
+    id: brief
+    attributes:
+      label: "Задача и страницы"
+      placeholder: "Что создать, для кого, обязательные страницы и функции"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Критерии готовности"
+      value: "Уникальная визуальная концепция Джона Фрая; мобильная/планшетная/десктопная версия; рабочая навигация; тесты; превью; передаваемый пакет сайта; без изменений main."
+    validations:
+      required: true
