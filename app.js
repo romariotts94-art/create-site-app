@@ -4,6 +4,8 @@ const emptyEl = document.querySelector("#empty");
 const countEl = document.querySelector("#site-count");
 const searchEl = document.querySelector("#search");
 const categoryEl = document.querySelector("#category");
+const localFile = window.location.protocol === "file:";
+const bundleRoot = localFile ? "../" : "./";
 const fallbackCatalog = [{
   id: "atelier-real-estate",
   slug: "atelier-real-estate",
@@ -22,9 +24,9 @@ const fallbackCatalog = [{
 
 function pathFromCatalog(url) {
   if (!url) return "";
-  if (url.startsWith("/marketplace/")) return `./${url.slice("/marketplace/".length)}`;
-  if (url.startsWith("/")) return `.${url}`;
-  return url.startsWith("./") ? url : `./${url}`;
+  if (url.startsWith("/marketplace/")) return `${bundleRoot}${url.slice("/marketplace/".length)}`;
+  if (url.startsWith("/")) return `${bundleRoot}${url.slice(1)}`;
+  return `${bundleRoot}${url.replace(/^\.\//, "")}`;
 }
 
 function rubles(value) {
@@ -61,13 +63,12 @@ function render() {
 function openPreview(site) {
   if (!site.previewUrl) return;
   const url = pathFromCatalog(site.previewUrl);
-  const opened = window.open(url, "_blank", "noopener,noreferrer");
-  if (!opened) window.location.assign(url);
+  window.location.assign(url);
 }
 
 async function init() {
   try {
-    const response = await fetch("./catalog/sites.json?v=assets-2");
+    const response = await fetch(`${bundleRoot}catalog/sites.json?v=assets-3`);
     if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
     state.sites = await response.json();
     [...new Set(state.sites.map((site) => site.category).filter(Boolean))].sort().forEach((category) => {
