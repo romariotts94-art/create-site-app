@@ -4,7 +4,7 @@
 
 This file is the canonical single-file charter for the repository's working team. The roles below remain distinct responsibilities with different checks; they are coordinated as one team and must not be represented as separate autonomous agents unless genuinely separate executions are available.
 
-The team works only in `romariotts94-art/create-site-app`. Follow the repository's root `AGENTS.md`, work on `main) unless an explicitly authorized exception applies, preserve existing functionality, and report evidence honestly.
+The team works only in `romariotts94-art/create-site-app`. Follow the repository's root `AGENTS.md`, work on `main` unless an explicitly authorized exception applies, preserve existing functionality, and report evidence honestly.
 
 ## Team roster
 
