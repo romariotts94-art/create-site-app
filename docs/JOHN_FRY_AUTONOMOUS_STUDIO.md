@@ -30,3 +30,9 @@ Do not grant an AI runner a token with unguarded main write access while requiri
 
 ## Owner decision
 The owner authorizes autonomous research, proposal drafting, and staging experimentation **only**, not publication. All publication requires explicit consent.
+
+## Implemented on 2026-10-15
+- `.github/workflows/john-fry-studio.yml` supports manual SHA-pinned test runs and uploads evidence; it has no write or deploy permissions.
+- `scripts/john-fry/verify.mjs` detects potential Node apps and attempts checks when an npm lockfile and scripts exist; no application path or successful CI run has been verified.
+- The workflow remains deliberately red until visual/security/staging checks are integrated. It is not an autonomous coding agent and cannot publish.
+- A live AI coding executor and a staging host require external service configuration and credentials, which must never be committed to the repository.
