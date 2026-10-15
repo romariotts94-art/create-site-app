@@ -1,5 +1,20 @@
 # AGENTS.md — Website Factory Rules
 
+## RULE 0 — NON-NEGOTIABLE PRE-FLIGHT GATE FOR ALL CODEX WORK
+
+**Highest-priority repository workflow rule. Applies to EVERY task that changes or creates the marketplace/catalog, an existing site, a future site, shared components, previews, integrations, tests, or supporting infrastructure in this repository. NO IMPLEMENTATION BEFORE COMPLIANCE.**
+
+Before any code or file modification:
+1. Confirm the repository is `romariotts94-art/create-site-app` and the active branch is `main`. Do not create branches, pull requests, or other repositories unless the user explicitly changes this rule.
+2. Read and obey this entire `AGENTS.md`, `docs/CINEMATIC_INTELLIGENCE_LUXURY.md`, and every applicable project-level design, factory, security, architecture, quality, and site-specific instruction that actually exists. Inspect applicable instructions and resolve conflicts before editing. Do not invent the contents of missing documents.
+3. Establish the required review roles for the work: **Researcher, Product Director, Art Director, Builder, QA, Security Reviewer, Fixer**, plus applicable Functional Critic, UI Critic, Code Critic. Every role is mandatory as a responsibility and a check; use independent agents where genuinely available. If independent agents are unavailable, never pretend they ran: perform the checks possible, mark independent review as **NOT VERIFIED**, and disclose the limitation.
+4. Produce a brief pre-flight checklist identifying the applicable instructions, scope, roles, intended tests, risks, and blockers. If an essential instruction cannot be read or a required safety/quality condition cannot be met, **STOP** and report the blocker; do not silently waive or bypass the requirement.
+5. Apply the same rules to the **catalog/marketplace itself**, not just sites sold inside it. Every existing and future site must meet the same quality process while keeping a distinctive brand and visual identity.
+6. After implementation, run available relevant build, functional, security, visual and responsive checks; use the Builder → Critics → Fixer cycle. Report actual evidence and unverified items. Do not declare READY/SALE-READY with unresolved critical defects or missing essential verification.
+
+**Gate policy:** No coding, styling, refactoring, publishing, or catalog changes without pre-flight compliance. Reading and inspecting files to establish compliance is permitted. Do not treat a claimed agent role as proof of independent validation. If instructions conflict, pause and ask for resolution rather than silently choosing a weaker rule. This rule is a repository instruction for Codex, not a technical enforcement mechanism; execution permissions and actual agent availability must still be verified.
+
+
 ## Mission
 This repository is the existing **create-site-app** marketplace and production website factory. Build complete, commercially transferable, secure, maintainable, independently deployable websites—not merely attractive demos. Preserve the existing marketplace, catalog, ten sites, architecture, and visual identity unless explicitly asked to change them.
 
