@@ -1,16 +1,16 @@
-name: John Fry Studio — guarded preview
+name: John Fry Studio — guarded candidate checks
 on:
   workflow_dispatch:
     inputs:
       target:
-        description: "Site or marketplace identifier (for audit)"
+        description: "Site or marketplace identifier"
         required: true
         default: "marketplace"
       change_id:
         description: "Approved work item ID"
         required: true
       candidate_sha:
-        description: "Exact main commit to test (40 hex chars)"
+        description: "Exact main commit to test (40 hex characters)"
         required: true
 permissions:
   contents: read
@@ -25,6 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: false
       - id: validate
         env:
@@ -41,7 +42,7 @@ jobs:
           git cat-file -e "${CANDIDATE_SHA}^{commit}"
           git merge-base --is-ancestor "$CANDIDATE_SHA" origin/main
           echo "sha=$CANDIDATE_SHA" >> "$GITHUB_OUTPUT"
-  test-candidate:
+  verify:
     needs: preflight
     runs-on: ubuntu-latest
     steps:
@@ -49,21 +50,25 @@ jobs:
         with:
           ref: ${{ needs.preflight.outputs.sha }}
           persist-credentials: false
-      - name: Detect project tooling
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Discover and execute project checks
+        id: checks
+        env:
+          TARGET: ${{ inputs.target }}
+          CHANGE_ID: ${{ inputs.change_id }}
+          CANDIDATE_SHA: ${{ needs.preflight.outputs.sha }}
         shell: bash
         run: |
           set -euo pipefail
-          if [ -f package.json ]; then
-            echo 'Root package detected'
-          elif [ -f apps/web/package.json ]; then
-            echo 'apps/web package detected'
-          else
-            echo 'BLOCKED: project package path and test commands not verified'
-            exit 1
-          fi
-      - name: Explicitly require verified test integration
-        run: |
-          echo 'BLOCKED: connect repository-specific build, unit, e2e, security, visual screenshot checks before preview approval'
-          exit 1
-  # Intentionally NO deploy job. Owner approval is required and deployment integration
-  # must be configured explicitly. This workflow never writes to main or production.
+          node scripts/john-fry/verify.mjs
+      - name: Upload evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: john-fry-checks-${{ github.run_id }}
+          path: artifacts/john-fry/
+          if-no-files-found: warn
+  # No deploy job. Candidate SHA approval and owner-controlled deployment are
+  # intentionally separate; no AI credential or production secret is exposed.
