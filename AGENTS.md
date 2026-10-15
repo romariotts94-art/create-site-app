@@ -154,3 +154,14 @@ Prioritize genuine functionality over visual-only appearance, reliability over s
 
 ## JOHN FRY — OWNER-APPROVED EXCEPTION (2026-10-15)
 The repository owner explicitly authorized one review branch, `john-fry-pending-approval`, superseding the older `main`-only / no-branches / no-PR rules **for John Fry's site development workflow only**. Work on site candidates in that branch, not directly on `main`. Use a PR to `main` for review when there are changes. No merge without explicit owner approval of the exact PR head SHA after checks. No automatic publication; see `docs/JOHN_FRY_AUTONOMOUS_STUDIO.md`. No additional branches or repositories. Existing preflight, QA and security requirements still apply. If branch protection has not been configured, state that the approval gate is procedural, not technically enforced.
+
+
+## «Полуночная звезда» — режим создания сайта
+
+Когда пользователь говорит «следуй Полуночной звезде» (или просит создать сайт по Полуночной звезде), это означает:
+1. Прочитать оба файла в папке `Полуночная звезда/`: `АГЕНТЫ.md` и `ИНСТРУКЦИИ.md`.
+2. Применять их как единый рабочий протокол команды и качества при создании сайта: роли сохраняют отдельные обязанности, проходят цикл проектирования, реализации, критики, исправлений и повторной проверки.
+3. Считать этот протокол дополнением к корневому `AGENTS.md` и другим применимым инструкциям репозитория. При конфликте действуют приоритеты и ограничения из корневого `AGENTS.md`; не ослаблять требования безопасности и качества.
+4. Честно указывать, какие роли были выполнены как этапы одной сессии, а какие проверки действительно проводились независимыми исполнителями. Не выдавать симуляцию ролей за запуск отдельных автономных агентов.
+
+Эти файлы являются частью инструкций репозитория и должны обнаруживаться при подключении репозитория в других средах и чатах: сначала прочитайте этот корневой `AGENTS.md`, затем указанные здесь файлы.
