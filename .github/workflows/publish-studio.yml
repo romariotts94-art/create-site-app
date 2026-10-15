@@ -1,0 +1,37 @@
+name: Publish Digital Studio admin preview
+on:
+  push:
+    branches: [john-fry-pending-approval]
+    paths:
+      - 'dist/studio/**'
+      - '.github/workflows/publish-studio.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: digital-studio-pages
+  cancel-in-progress: true
+jobs:
+  publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: john-fry-pending-approval
+      - name: Prepare isolated studio site
+        run: |
+          test -s dist/studio/index.html
+          mkdir -p /tmp/studio-pages
+          cp -R dist/studio/. /tmp/studio-pages/
+          printf '%s\n' 'User-agent: *' 'Disallow: /' > /tmp/studio-pages/robots.txt
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: /tmp/studio-pages
+      - id: deployment
+        uses: actions/deploy-pages@v4
