@@ -15,6 +15,19 @@ Before any code or file modification:
 **Gate policy:** No coding, styling, refactoring, publishing, or catalog changes without pre-flight compliance. Reading and inspecting files to establish compliance is permitted. Do not treat a claimed agent role as proof of independent validation. If instructions conflict, pause and ask for resolution rather than silently choosing a weaker rule. This rule is a repository instruction for Codex, not a technical enforcement mechanism; execution permissions and actual agent availability must still be verified.
 
 
+## STRICT DESTINATION LOCK — CODEX PRE-FLIGHT
+
+For EVERY implementation task, before any edits or commits, verify and report:
+- GitHub repository full name: `romariotts94-art/create-site-app` (owner `romariotts94-art`, repository `create-site-app`).
+- Candidate branch: `john-fry-pending-approval` (NOT `main`).
+- Existing project root and relevant site/package directory. Do not assume paths; inspect the repository tree.
+- Run `git remote -v`, `git branch --show-current`, and `git status --short` when shell access is available. If any identity, branch, or target path differs, STOP without writing and ask the owner to select the correct workspace.
+- Never initialize or push to a new repository, switch to another project, create an extra branch, merge, deploy, or publish unless the owner explicitly authorizes that specific action.
+- Never push directly to `main`. Do not modify unrelated applications (including BRAVE-365).
+- If Codex's execution environment cannot select the approved branch, STOP and explain the blocker rather than silently writing to `main`.
+- Before final report, re-check remote, branch, paths, and changed files. Include repository, branch, commit SHA, tests, preview evidence, and remaining limitations.
+These are agent instructions, not technical GitHub branch protection. Configure GitHub rulesets/branch protection separately to enforce write restrictions.
+
 ## Mission
 This repository is the existing **create-site-app** marketplace and production website factory. Build complete, commercially transferable, secure, maintainable, independently deployable websites—not merely attractive demos. Preserve the existing marketplace, catalog, ten sites, architecture, and visual identity unless explicitly asked to change them.
 
