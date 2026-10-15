@@ -6,16 +6,16 @@ const apartments=window.NH_APARTMENTS||[
 ];
 
 const gallerySlides=[
-  {src:'assets/nord-habitat-hero.png',kicker:'01 / АРХИТЕКТУРА',title:'Северный берег',desc:'Панорамный взгляд на квартал, который собирает город и природу в одном маршруте.'},
-  {src:'assets/nord-interior.png',kicker:'02 / ИНТЕРЬЕР',title:'Свет внутри',desc:'Тихая палитра, естественный свет и детали, которые работают на ежедневный комфорт.'},
-  {src:'assets/nord-courtyard.png',kicker:'03 / ДВОР',title:'Двор как продолжение дома',desc:'Зелёный маршрут для прогулки, встреч и паузы между делами.'},
-  {src:'assets/nord-rooftop.png',kicker:'04 / ВЫСОТА',title:'Город сверху',desc:'Открытые террасы и горизонт, который меняется вместе с временем дня.'},
-  {src:'assets/nord-lobby.png',kicker:'05 / ЛОББИ',title:'Первое впечатление',desc:'Лобби с гостиничным уровнем сервиса и понятным маршрутом до квартиры.'},
-  {src:'assets/interior-collection.png',kicker:'06 / ПЛАНИРОВКА',title:'Сценарии под вас',desc:'Пространства, которые легко настроить под работу, семью и личный ритм.'},
-  {src:'assets/hero-architectural.png',kicker:'07 / ГОРОД',title:'Москва в масштабе жизни',desc:'Связь с центром, парками, школами и привычными местами — без лишних пересадок.'},
-  {src:'assets/nord-exterior.png',kicker:'08 / ФАСАД',title:'Материалы с характером',desc:'Архитектура, рассчитанная на долгую дистанцию и ежедневное удовольствие.'},
-  {src:'assets/nord-apartment.png',kicker:'09 / КВАРТИРА',title:'Место для своего',desc:'Реальные бытовые сценарии становятся частью выбора ещё до просмотра.'},
-  {src:'assets/nord-terrace.png',kicker:'10 / ТЕРРАСА',title:'Свой воздух',desc:'Личный открытый метр для завтрака, книг и длинных летних вечеров.'}
+  {src:'assets/nord-habitat-hero.jpg',kicker:'01 / АРХИТЕКТУРА',title:'Северный берег',desc:'Панорамный взгляд на квартал, который собирает город и природу в одном маршруте.'},
+  {src:'assets/nord-interior.jpg',kicker:'02 / ИНТЕРЬЕР',title:'Свет внутри',desc:'Тихая палитра, естественный свет и детали, которые работают на ежедневный комфорт.'},
+  {src:'assets/nord-courtyard.jpg',kicker:'03 / ДВОР',title:'Двор как продолжение дома',desc:'Зелёный маршрут для прогулки, встреч и паузы между делами.'},
+  {src:'assets/nord-rooftop.jpg',kicker:'04 / ВЫСОТА',title:'Город сверху',desc:'Открытые террасы и горизонт, который меняется вместе с временем дня.'},
+  {src:'assets/nord-lobby.jpg',kicker:'05 / ЛОББИ',title:'Первое впечатление',desc:'Лобби с гостиничным уровнем сервиса и понятным маршрутом до квартиры.'},
+  {src:'assets/interior-collection.jpg',kicker:'06 / ПЛАНИРОВКА',title:'Сценарии под вас',desc:'Пространства, которые легко настроить под работу, семью и личный ритм.'},
+  {src:'assets/hero-architectural.jpg',kicker:'07 / ГОРОД',title:'Москва в масштабе жизни',desc:'Связь с центром, парками, школами и привычными местами — без лишних пересадок.'},
+  {src:'assets/nord-exterior.jpg',kicker:'08 / ФАСАД',title:'Материалы с характером',desc:'Архитектура, рассчитанная на долгую дистанцию и ежедневное удовольствие.'},
+  {src:'assets/nord-apartment.jpg',kicker:'09 / КВАРТИРА',title:'Место для своего',desc:'Реальные бытовые сценарии становятся частью выбора ещё до просмотра.'},
+  {src:'assets/nord-terrace.jpg',kicker:'10 / ТЕРРАСА',title:'Свой воздух',desc:'Личный открытый метр для завтрака, книг и длинных летних вечеров.'}
 ];
 
 const toast=(message)=>{const el=document.querySelector('#toast');if(!el)return;el.textContent=message;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)};
