@@ -1,5 +1,7 @@
 # ESTERRA — review report / запуск 1
 
+Implementation commit: `7f91fac10c67e45798942fa2bc64daf6e38b76bd`.
+
 ## Роли
 
 - Researcher: UX-решения зафиксированы в SPEC на основе доступных образцов недвижимости и booking flows; отдельный browser research в этом запуске ещё не приложен.

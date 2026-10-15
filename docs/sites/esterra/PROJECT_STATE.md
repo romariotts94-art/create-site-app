@@ -4,6 +4,8 @@
 
 Запуск 1, фундамент и первый сквозной сценарий. Работа ведётся только в `romariotts94-art/create-site-app` на ветке `codex/quality-gates-art-product`.
 
+Implementation commit: `7f91fac10c67e45798942fa2bc64daf6e38b76bd`.
+
 ## IMPLEMENTED
 
 - Изолированный UI ESTERRA добавлен в `dist/esterra`.
