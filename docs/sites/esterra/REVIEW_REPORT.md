@@ -8,9 +8,9 @@ Implementation commit: `7f91fac10c67e45798942fa2bc64daf6e38b76bd`.
 - Product Director: P0 journey определён в FEATURE_MATRIX.
 - Art Director: токены и page inventory определены; визуальный veto не закрыт без реальных скриншотов.
 - Builder: вертикальный срез реализован.
-- QA: автоматические API/static checks выполняются после завершения кода.
+- QA: `node --test sites\\esterra\\tests\\api.test.mjs` — 5/5; syntax, HTTP smoke and diff checks passed.
 - Security Reviewer: серверная валидация, path traversal guard, no-store API responses и отсутствие секретов в коде добавлены; полный review pending.
-- Fixer: выполнит исправления после результатов тестов.
+- Fixer: исправил seed INSERT для обязательного `city`, сделал `message` необязательным, добавил поддержку фильтра `3+`, rate limit и origin check для POST заявки.
 
 ## IMPLEMENTED
 
