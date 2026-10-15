@@ -44,7 +44,7 @@ function render() {
   countEl.textContent = state.sites.length;
   emptyEl.hidden = sites.length > 0;
   catalogEl.innerHTML = sites.map((site, index) => `
-    <article class="site-card" data-preview="${site.id}" tabindex="0" role="link" aria-label="Открыть сайт: ${site.title}">
+    <article class="site-card" data-preview="${site.id}" tabindex="0" role="${site.previewUrl ? "link" : "article"}" aria-label="${site.previewUrl ? `Открыть сайт: ${site.title}` : site.title}">
       <div class="site-art" style="background-image:linear-gradient(180deg,#0001 20%,#000b),url('${pathFromCatalog(site.previewImage || site.previewUrl)}')"><span class="site-number">${String(index + 1).padStart(2, "0")} / ${String(state.sites.length).padStart(2, "0")}</span><span class="site-status">${site.status === "published" ? "Готов к запуску" : "На доработке"}</span><h2>${site.title}</h2></div>
       <div class="site-body">
         <div class="site-meta"><span>${site.category}</span><span>Лицензия включена</span></div>
@@ -53,7 +53,6 @@ function render() {
         <div class="label-group"><span class="label-title">Технологии</span><div class="feature-list">${(site.technologies || []).slice(0, 4).map((feature) => `<span class="feature">${feature}</span>`).join("")}</div></div>
         <div class="label-group"><span class="label-title">Подходит для</span><div class="feature-list">${(site.suitableFor || []).slice(0, 3).map((feature) => `<span class="feature feature-soft">${feature}</span>`).join("")}</div></div>
         <div class="included">✓ ${(site.included || []).slice(0, 3).join(" · ")}</div>
-        ${site.evaluation ? `<div class="evaluation"><div class="evaluation-head"><span>Математический вес</span><strong>${site.evaluation.totalWeight}</strong></div><div class="evaluation-class">${site.evaluation.class} · усиление ×${site.evaluation.multiplier}</div><div class="evaluation-grid"><span>Сущности <b>${site.evaluation.entityWeight}</b></span><span>Функциональная нагрузка <b>${site.evaluation.functionalLoad}</b></span></div></div>` : ""}
         <div class="site-footer"><span class="price">${rubles(site.price)}</span><span class="button">${site.previewUrl ? "Открыть сайт ↗" : "В разработке"}</span></div>
       </div>
     </article>`).join("");
