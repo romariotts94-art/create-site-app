@@ -3,7 +3,7 @@
 Status: **FOUNDATION ONLY / NOT OPERATIONAL AUTONOMOUS CODING**. No AI runner, model credential, staging target, verified project build commands, or deployment integration has been configured by this document. Never present this as an active autonomous deployment pipeline.
 
 ## Scope and repository rules
-Only `romariotts94-art/create-site-app`, `main`. No new branches or pull requests. Read `AGENTS.md`, `agents/john-fry/PERSONA.md`, `docs/CINEMATIC_INTELLIGENCE_LUXURY.md`. All seven mandatory roles remain required, with truthful independent-agent disclosures.
+Only `romariotts94-art/create-site-app`. Candidate work: `john-fry-pending-approval`. Approved integration: `main`. Pull requests from the candidate branch are allowed; no other repositories or branches. Read `AGENTS.md`, `agents/john-fry/PERSONA.md`, `docs/CINEMATIC_INTELLIGENCE_LUXURY.md`. All seven mandatory roles remain required, with truthful independent-agent disclosures.
 
 ## Workflow
 1. Daily research brief (ChatGPT automation is separate from GitHub Actions). Source and date every finding; do not assume this automation can directly push code to GitHub.
@@ -15,7 +15,7 @@ Only `romariotts94-art/create-site-app`, `main`. No new branches or pull request
 7. Publication (NOT YET CONNECTED) uses a separately configured, least-privilege deployment workflow and records a rollback identifier. Revert or rollback must be rehearsed before enabling.
 
 ## Safety invariant
-Do not grant an AI runner a token with unguarded main write access while requiring owner approval: direct pushes would circumvent the gate. With the main-only/no-branches policy, use isolated workspaces/artifacts for unapproved changes, then apply approved patch to main through an owner-authorized process. GitHub Environments with required reviewers may gate deployment, but do not by themselves prevent main pushes. No production publishing or merges until owner approves.
+Do not grant an AI runner a token with unguarded main write access while requiring owner approval: direct pushes would circumvent the gate. Work on the approval branch or in an isolated workspace. Never grant the coding runner permission to merge or directly push to `main`. Require owner authorization for the exact reviewed SHA before merge. GitHub Environments with required reviewers may gate deployment, but do not by themselves prevent main pushes. No production publishing or merges until owner approves.
 
 ## GitHub workflow status
 `.github/workflows/john-fry-studio.yml` is a deliberately **fail-closed skeleton**: validates input and refuses to declare success without verified project-specific tests. It does not run Codex, change code, or publish. Once the actual application paths, runner, tests, staging and approval environment are verified, replace the blocking test step with real checks and configure approval.
@@ -43,3 +43,6 @@ The owner authorizes autonomous research, proposal drafting, and staging experim
 - This is an unexecuted workflow definition, **not evidence that tests passed**. It does not create a public preview URL, deploy GitHub Pages, change production, or provide an AI coding runner.
 - GitHub Pages can host static `dist/` only after the owner explicitly approves a publication SHA and enables a separate owner-gated deployment workflow. Static browser demo features are not proof of real production backends.
 - For autonomous AI coding, select and authorize a runner and credential method; do not grant unguarded push access to `main`.
+
+## Target: website factory control plane (not yet implemented)
+The user enters one task in Codex. The orchestrator loads AGENTS.md and role profiles, records a job with an ID, delegates research/art direction/build/QA as capabilities permit, and commits candidate files only to `john-fry-pending-approval`. The candidate must contain a separately transferable site package, marketplace catalog metadata, preview artifacts, tests and a handover manifest. A status dashboard may later display queued/running/failed/awaiting-approval jobs, previews, logs and costs. No agent may claim a role actually executed without an execution record. A draft PR presents a SHA-pinned candidate for owner approval; only an owner-authorized merge updates `main`. A merge is not the same as deploying a live website. Codex subscription-based automatic unattended scheduling is not assumed available; verify native Codex automation before implementing any runner or asking for API credentials.
