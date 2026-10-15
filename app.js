@@ -68,7 +68,7 @@ function openPreview(site) {
 
 async function init() {
   try {
-    const response = await fetch(`${bundleRoot}catalog/sites.json?v=assets-3`);
+    const response = await fetch(`${bundleRoot}catalog/sites.json?v=assets-12`);
     if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
     state.sites = await response.json();
     [...new Set(state.sites.map((site) => site.category).filter(Boolean))].sort().forEach((category) => {
