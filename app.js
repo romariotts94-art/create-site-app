@@ -14,7 +14,7 @@ const fallbackCatalog = [{
   category: "Недвижимость",
   price: 1000000,
   previewUrl: "sites/atelier-real-estate/public/index.html",
-  previewImage: "sites/atelier-real-estate/public/assets/hero-architectural.png",
+  previewImage: "sites/atelier-real-estate/public/assets/hero-architectural.jpg",
   description: "Многостраничная премиальная платформа недвижимости с каталогом, подборками, статьями, видео и картой.",
   tagline: "Премиальный сайт недвижимости, который помогает продавать доверие и объекты",
   technologies: ["HTML5", "CSS3", "Vanilla JavaScript", "Responsive UI"],
@@ -68,7 +68,7 @@ function openPreview(site) {
 
 async function init() {
   try {
-    const response = await fetch(`${bundleRoot}catalog/sites.json?v=assets-12`);
+    const response = await fetch(`${bundleRoot}catalog/sites.json?v=assets-14`);
     if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
     state.sites = await response.json();
     [...new Set(state.sites.map((site) => site.category).filter(Boolean))].sort().forEach((category) => {
