@@ -5,7 +5,7 @@ const countEl = document.querySelector("#site-count");
 const searchEl = document.querySelector("#search");
 const categoryEl = document.querySelector("#category");
 const localFile = window.location.protocol === "file:";
-const bundleRoot = localFile ? "../" : "./";
+const bundleRoot = localFile ? "../dist/" : "./";
 const fallbackCatalog = [{
   id: "atelier-real-estate",
   slug: "atelier-real-estate",
