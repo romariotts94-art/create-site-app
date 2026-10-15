@@ -1,17 +1,17 @@
 const PHOTO_SET = [
-  'assets/hero-architectural.png',
-  'assets/interior-collection.png',
-  'assets/hero-architectural.png',
-  'assets/interior-collection.png',
-  'assets/hero-architectural.png',
-  'assets/interior-collection.png',
-  'assets/hero-architectural.png',
-  'assets/interior-collection.png',
-  'assets/hero-architectural.png',
-  'assets/interior-collection.png',
-  'assets/hero-architectural.png',
-  'assets/interior-collection.png',
-  'assets/hero-architectural.png'
+  'assets/hero-architectural.jpg',
+  'assets/interior-collection.jpg',
+  'assets/hero-architectural.jpg',
+  'assets/interior-collection.jpg',
+  'assets/hero-architectural.jpg',
+  'assets/interior-collection.jpg',
+  'assets/hero-architectural.jpg',
+  'assets/interior-collection.jpg',
+  'assets/hero-architectural.jpg',
+  'assets/interior-collection.jpg',
+  'assets/hero-architectural.jpg',
+  'assets/interior-collection.jpg',
+  'assets/hero-architectural.jpg'
 ];
 const DISTRICTS=['Хамовники','Пресненский','Патриаршие пруды','Раменки','Замоскворечье','Таганский','Сокольники','Аэропорт','Крылатское','Даниловский','Фили-Давыдково','Мещанский'];
 const NAMES=['Светлая резиденция','Пентхаус с панорамой','Квартира у парка','Городской дом','Резиденция на высоте','Лофт с террасой','Семейная квартира','Апартаменты с видом','Квартира в новом доме','Классика в центре','Тихий адрес','Квартира с кабинетом'];
