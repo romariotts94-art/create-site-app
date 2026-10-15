@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "overall_pass": { "type": "boolean" },
+    "summary": { "type": "string" },
+    "blocker_count": { "type": "integer", "minimum": 0 },
+    "critical_count": { "type": "integer", "minimum": 0 },
+    "high_count": { "type": "integer", "minimum": 0 },
+    "medium_count": { "type": "integer", "minimum": 0 },
+    "low_count": { "type": "integer", "minimum": 0 },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": { "type": "string", "enum": ["BLOCKER", "CRITICAL", "HIGH", "MEDIUM", "LOW"] },
+          "area": { "type": "string" },
+          "defect": { "type": "string" },
+          "evidence": { "type": "string" },
+          "required_fix": { "type": "string" }
+        },
+        "required": ["severity", "area", "defect", "evidence", "required_fix"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["overall_pass", "summary", "blocker_count", "critical_count", "high_count", "medium_count", "low_count", "findings"],
+  "additionalProperties": false
+}
