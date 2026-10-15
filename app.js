@@ -4,9 +4,6 @@ const emptyEl = document.querySelector("#empty");
 const countEl = document.querySelector("#site-count");
 const searchEl = document.querySelector("#search");
 const categoryEl = document.querySelector("#category");
-const dialog = document.querySelector("#preview-dialog");
-const frame = document.querySelector("#preview-frame");
-const dialogTitle = document.querySelector("#dialog-title");
 const fallbackCatalog = [{
   id: "atelier-real-estate",
   slug: "atelier-real-estate",
@@ -14,8 +11,8 @@ const fallbackCatalog = [{
   status: "published",
   category: "Недвижимость",
   price: 1000000,
-  previewUrl: "../sites/atelier-real-estate/public/index.html",
-  previewImage: "../sites/atelier-real-estate/public/assets/hero-architectural.png",
+  previewUrl: "sites/atelier-real-estate/public/index.html",
+  previewImage: "sites/atelier-real-estate/public/assets/hero-architectural.png",
   description: "Многостраничная премиальная платформа недвижимости с каталогом, подборками, статьями, видео и картой.",
   tagline: "Премиальный сайт недвижимости, который помогает продавать доверие и объекты",
   technologies: ["HTML5", "CSS3", "Vanilla JavaScript", "Responsive UI"],
@@ -24,7 +21,10 @@ const fallbackCatalog = [{
 }];
 
 function pathFromCatalog(url) {
-  return url ? url.replace(/^\/marketplace\//, "../") : "";
+  if (!url) return "";
+  if (url.startsWith("/marketplace/")) return `./${url.slice("/marketplace/".length)}`;
+  if (url.startsWith("/")) return `.${url}`;
+  return url;
 }
 
 function rubles(value) {
@@ -44,7 +44,7 @@ function render() {
   countEl.textContent = state.sites.length;
   emptyEl.hidden = sites.length > 0;
   catalogEl.innerHTML = sites.map((site, index) => `
-    <article class="site-card" data-preview="${site.id}" tabindex="0" role="button" aria-label="Открыть сайт: ${site.title}">
+    <article class="site-card" data-preview="${site.id}" tabindex="0" role="link" aria-label="Открыть сайт: ${site.title}">
       <div class="site-art" style="background-image:linear-gradient(180deg,#0001 20%,#000b),url('${pathFromCatalog(site.previewImage || site.previewUrl)}')"><span class="site-number">${String(index + 1).padStart(2, "0")} / ${String(state.sites.length).padStart(2, "0")}</span><span class="site-status">${site.status === "published" ? "Готов к запуску" : "На доработке"}</span><h2>${site.title}</h2></div>
       <div class="site-body">
         <div class="site-meta"><span>${site.category}</span><span>Лицензия включена</span></div>
@@ -54,20 +54,21 @@ function render() {
         <div class="label-group"><span class="label-title">Подходит для</span><div class="feature-list">${(site.suitableFor || []).slice(0, 3).map((feature) => `<span class="feature feature-soft">${feature}</span>`).join("")}</div></div>
         <div class="included">✓ ${(site.included || []).slice(0, 3).join(" · ")}</div>
         ${site.evaluation ? `<div class="evaluation"><div class="evaluation-head"><span>Математический вес</span><strong>${site.evaluation.totalWeight}</strong></div><div class="evaluation-class">${site.evaluation.class} · усиление ×${site.evaluation.multiplier}</div><div class="evaluation-grid"><span>Сущности <b>${site.evaluation.entityWeight}</b></span><span>Функциональная нагрузка <b>${site.evaluation.functionalLoad}</b></span></div></div>` : ""}
-        <div class="site-footer"><span class="price">${rubles(site.price)}</span><button class="button" type="button" data-preview="${site.id}" ${site.previewUrl ? "" : "disabled"}>${site.previewUrl ? "Открыть демо" : "В разработке"}</button></div>
+        <div class="site-footer"><span class="price">${rubles(site.price)}</span><span class="button">${site.previewUrl ? "Открыть сайт ↗" : "В разработке"}</span></div>
       </div>
     </article>`).join("");
 }
 
 function openPreview(site) {
-  dialogTitle.textContent = site.title;
-  frame.src = pathFromCatalog(site.previewUrl);
-  dialog.showModal();
+  if (!site.previewUrl) return;
+  const url = pathFromCatalog(site.previewUrl);
+  const opened = window.open(url, "_blank", "noopener,noreferrer");
+  if (!opened) window.location.assign(url);
 }
 
 async function init() {
   try {
-    const response = await fetch("../catalog/sites.json");
+    const response = await fetch("./catalog/sites.json");
     if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
     state.sites = await response.json();
     [...new Set(state.sites.map((site) => site.category).filter(Boolean))].sort().forEach((category) => {
@@ -98,6 +99,4 @@ catalogEl.addEventListener("keydown", (event) => {
   event.preventDefault();
   openFromCard(card);
 });
-document.querySelector("#close-dialog").addEventListener("click", () => { frame.src = "about:blank"; dialog.close(); });
-dialog.addEventListener("click", (event) => { if (event.target === dialog) { frame.src = "about:blank"; dialog.close(); } });
 init();
