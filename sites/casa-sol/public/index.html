@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="catalog-back" href="../../../index.html" aria-label="Вернуться в каталог">← В каталог</a>
+  <a class="sticky-cta sticky-cta--raised" href="mailto:hello@buysite.shop?subject=Запуск%20сайта">Запустить сайт сегодня <span aria-hidden="true">↗</span></a>
   <div class="announcement">CASA SOL / ИЗБРАННЫЕ ДОМА У ВОДЫ <span>Консультация архитектора включена в подбор</span></div>
   <header class="header"><a class="brand" href="index.html"><span class="sun">✳</span><span>CASA <i>SOL</i></span></a><nav><a href="catalog.html">Дома</a><a href="collections.html">Подборки</a><a href="journal.html">Журнал</a><a href="#process">Как покупаем</a></nav><div class="header-actions"><button class="text-button" data-open="account">Войти</button><button class="round-menu" aria-label="Меню">☰</button></div></header>
   <main>
@@ -31,4 +33,5 @@
   <div class="modal-layer" id="modalLayer" hidden><div class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose" aria-label="Закрыть">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
   <script src="property-data.js"></script><script src="app.js"></script>
 </body>
+<script>(()=>{let x=0,y=0;document.addEventListener('touchstart',e=>{x=e.changedTouches[0].clientX;y=e.changedTouches[0].clientY},{passive:true});document.addEventListener('touchend',e=>{const t=e.changedTouches[0];if(x-t.clientX>80&&Math.abs(y-t.clientY)<120)location.assign('../../../index.html')},{passive:true})})();</script>
 </html>
