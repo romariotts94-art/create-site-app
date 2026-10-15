@@ -1,11 +1,13 @@
 name: John Fry — browser QA and visual evidence
 on:
   push:
-    branches: [main]
+    branches: [main, john-fry-pending-approval]
     paths:
       - 'dist/**'
       - 'scripts/john-fry/browser-qa.mjs'
       - '.github/workflows/john-fry-browser.yml'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
     inputs:
       candidate_sha:
