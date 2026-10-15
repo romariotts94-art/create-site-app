@@ -8,7 +8,7 @@
     "price": 1000000,
     "currency": "RUB",
     "previewUrl": "sites/atelier-real-estate/public/index.html",
-    "previewImage": "sites/atelier-real-estate/public/assets/hero-architectural.jpg",
+    "previewImage": "sites/atelier-real-estate/public/assets/hero-architectural.png",
     "packagePath": "marketplace/sites/atelier-real-estate/packages/atelier-real-estate.zip",
     "description": "Многостраничная премиальная платформа недвижимости с каталогом, подборками, статьями, видео и картой.",
     "tagline": "Премиальная подача объектов для агентства, которому доверяют",
@@ -59,7 +59,7 @@
     "price": 1000000,
     "currency": "RUB",
     "previewUrl": "sites/noir-estate/public/index.html",
-    "previewImage": "sites/noir-estate/public/assets/hero-architectural.jpg",
+    "previewImage": "sites/noir-estate/public/assets/hero-architectural.png",
     "description": "Многостраничная тёмная редакционная платформа для знаковых городских объектов, с каталогом, подборками, статьями, видео и картой.",
     "tagline": "Тёмная редакционная эстетика для знаковых городских объектов",
     "technologies": [
@@ -93,7 +93,7 @@
     "price": 1000000,
     "currency": "RUB",
     "previewUrl": "sites/casa-sol/public/index.html",
-    "previewImage": "sites/casa-sol/public/assets/hero-architectural.jpg",
+    "previewImage": "sites/casa-sol/public/assets/hero-architectural.png",
     "packagePath": "marketplace/sites/casa-sol/packages/casa-sol.zip",
     "description": "Многостраничная тёплая платформа для покупки загородного дома: каталог, подборки, финансовый маршрут, просмотры и сопровождение сделки.",
     "tagline": "Тёплая платформа для покупки дома, который становится частью жизни",
@@ -162,7 +162,7 @@
     "price": 1000000,
     "currency": "RUB",
     "previewUrl": "sites/nord-habitat/public/index.html",
-    "previewImage": "sites/nord-habitat/public/assets/nord-habitat-hero.jpg",
+    "previewImage": "sites/nord-habitat/public/assets/nord-habitat-hero.png",
     "description": "Современный девелоперский сервис для поиска квартиры, проекта и района: AI-поиск, каталог, экономика покупки и маршрут клиента.",
     "tagline": "Умный девелоперский сервис для выбора квартиры и района",
     "technologies": [
@@ -207,6 +207,7 @@
     "category": "Коммерческая недвижимость",
     "price": 1000000,
     "currency": "RUB",
+    "previewImage": "sites/atelier-real-estate/public/assets/hero-architectural.png",
     "description": "Сильный городской интерфейс для офисов и коммерческих площадей. Профиль готовится на общем ядре BuySite.",
     "tagline": "Сильный городской интерфейс для офисов и коммерческих площадей",
     "technologies": [
@@ -238,6 +239,7 @@
     "category": "Интерьеры и недвижимость",
     "price": 1000000,
     "currency": "RUB",
+    "previewImage": "sites/casa-sol/public/assets/interior-collection.png",
     "description": "Мягкая премиальная подача для клиентов, выбирающих глазами. Профиль готовится на общем ядре BuySite.",
     "tagline": "Мягкая премиальная подача для клиентов, выбирающих глазами",
     "technologies": [
@@ -269,6 +271,7 @@
     "category": "Девелопмент",
     "price": 1000000,
     "currency": "RUB",
+    "previewImage": "sites/nord-habitat/public/assets/nord-habitat-hero.png",
     "description": "Инструмент продаж жилого проекта с планировками и аналитикой. Профиль готовится на общем ядре BuySite.",
     "tagline": "Инструмент продаж жилого проекта с планировками и аналитикой",
     "technologies": [
@@ -300,6 +303,7 @@
     "category": "Инвестиции",
     "price": 1000000,
     "currency": "RUB",
+    "previewImage": "sites/noir-estate/public/assets/hero-architectural.png",
     "description": "Сайт, который превращает характеристики объекта в инвестиционное решение. Профиль готовится на общем ядре BuySite.",
     "tagline": "Сайт, который превращает характеристики объекта в инвестиционное решение",
     "technologies": [
@@ -331,6 +335,7 @@
     "category": "Аренда",
     "price": 1000000,
     "currency": "RUB",
+    "previewImage": "sites/casa-sol/public/assets/casa-sol-terrace.png",
     "description": "Эмоциональная витрина для бронирования квартир и апартаментов. Профиль готовится на общем ядре BuySite.",
     "tagline": "Эмоциональная витрина для бронирования квартир и апартаментов",
     "technologies": [
@@ -362,6 +367,7 @@
     "category": "Платформа недвижимости",
     "price": 1000000,
     "currency": "RUB",
+    "previewImage": "sites/nord-habitat/public/assets/nord-interior.png",
     "description": "Полноценная цифровая система продаж, заявок и управления объектами. Профиль готовится на общем ядре BuySite.",
     "tagline": "Полноценная цифровая система продаж, заявок и управления объектами",
     "technologies": [
