@@ -28,6 +28,7 @@ body { margin: 0; min-width: 320px; }
 .site-card { min-width: 0; overflow: hidden; border: 1px solid #e0e5ea; border-radius: 20px; background: #fff; box-shadow: 0 12px 34px #19232d0c; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
 .site-card:hover, .site-card:focus-visible { transform: translateY(-4px); border-color: #b9a6dd; box-shadow: 0 18px 42px #19232d18; outline: 0; }
 .site-art { position: relative; min-height: 220px; padding: 18px; background-position: center; background-size: cover; background-color: #394957; color: #fff; }
+.site-art > .site-art-image { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
 .site-art:after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, #0001 20%, #000b); }
 .site-art > * { position: relative; z-index: 1; }
 .site-number { font-size: 12px; opacity: .85; }
