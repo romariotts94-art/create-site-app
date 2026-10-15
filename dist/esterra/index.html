@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="ESTERRA — сервис выбора недвижимости для покупки и аренды." />
+  <title>ESTERRA — пространство для решения</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./index.html" aria-label="ESTERRA, на главную"><span class="brand-mark">E</span><span>ESTERRA</span></a><nav aria-label="Основная навигация"><a href="#catalog">Объекты</a><a href="#principles">Подход</a><a href="#request">Заявка</a></nav><a class="catalog-link" href="../index.html">BRAVE 365 / каталог</a></header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">ESTERRA / REAL ESTATE MARKETPLACE</p><h1 id="hero-title">Место для<br /><em>следующего шага.</em></h1><p class="hero-lead">Покупка, долгосрочная и посуточная аренда в одном ясном маршруте. Сначала — реальный объект. Потом — решение без лишнего шума.</p><a class="button button-dark" href="#catalog">Смотреть объекты <span>↗</span></a></div><div class="hero-visual"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85" alt="Светлый интерьер современной квартиры" /><div class="hero-caption"><span>01 / living well</span><b>Спокойная<br />оптика выбора</b></div></div></section>
+    <section class="search-section" id="catalog" aria-labelledby="catalog-title"><div class="section-heading"><div><p class="eyebrow">01 / подборка</p><h2 id="catalog-title">Выбирайте по<br /><em>сценарию жизни.</em></h2></div><div class="data-status" id="apiStatus" role="status"><i></i><span>Подключаем базу объектов…</span></div></div><form class="search-panel" id="searchForm"><div class="deal-switch" role="group" aria-label="Тип сделки"><button type="button" data-deal="buy" class="active">Купить</button><button type="button" data-deal="long_rent">Аренда</button><button type="button" data-deal="daily_rent">Посуточно</button></div><label>Район или ориентир<input name="q" placeholder="Хамовники, парк, вода…" /></label><label>До, ₽<input name="max_price" inputmode="numeric" placeholder="Без лимита" /></label><label>Комнаты<select name="rooms"><option value="">Любое число</option><option value="0">Студия</option><option value="1">1</option><option value="2">2</option><option value="3">3+</option></select></label><button class="button button-dark search-submit" type="submit">Найти <span>↗</span></button></form><div class="results-meta"><span id="resultsCount">Загрузка объектов</span><span>Демонстрационная база ESTERRA</span></div><div class="property-grid" id="propertyGrid" aria-live="polite"></div><div class="empty-state" id="emptyState" hidden><strong>По этому сценарию пока тихо.</strong><span>Измените фильтры, и мы снова посмотрим базу.</span></div></section>
+    <section class="principles" id="principles"><div><p class="eyebrow">02 / редакция</p><h2>Смотрим на<br /><em>контекст.</em></h2></div><div class="principle-list"><article><span>01</span><div><h3>Маршрут</h3><p>Метро, парк, вода и обычный вторник рядом с объектом.</p></div></article><article><span>02</span><div><h3>Состояние</h3><p>Показываем, что доступно сейчас, и не прячем следующий шаг.</p></div></article><article><span>03</span><div><h3>Диалог</h3><p>Заявка валидируется и записывается в базу, а не исчезает после клика.</p></div></article></div></section>
+    <section class="request-banner" id="request"><div><p class="eyebrow">03 / следующий шаг</p><h2>Нашли своё?<br /><em>Оставьте след.</em></h2></div><p>Откройте карточку объекта, заполните короткую форму — команда ESTERRA получит заявку и вернётся с ответом.</p></section>
+  </main>
+  <footer><span>ESTERRA / product slice 01</span><span>Демо-база · реальные заявки сохраняются в SQLite</span></footer>
+  <dialog id="propertyDialog" class="property-dialog"><button class="dialog-close" id="dialogClose" aria-label="Закрыть">×</button><div id="propertyDetail"></div></dialog>
+  <script src="./app.js" defer></script>
+</body>
+</html>

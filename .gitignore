@@ -5,3 +5,5 @@ node_modules/
 !.env.example
 dist/**/*.map
 .DS_Store
+sites/esterra/data/*.db
+sites/esterra/data/*.db-*
